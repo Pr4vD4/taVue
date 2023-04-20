@@ -50,7 +50,7 @@ export default {
             const form = new FormData(this.$refs.form)
 
             try {
-                const {data} = await axios.post('http://taapi/api/login', this.form)
+                const {data} = await api.post('/login', this.form)
                 if (data.message.toLowerCase() === 'success') {
                     localStorage.token = data.token
                     console.log(data)

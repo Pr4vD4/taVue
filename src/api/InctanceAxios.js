@@ -1,9 +1,6 @@
 import axios from "axios";
 
 const api = axios.create({
-    BaseURL: 'http://taapi/api',
-    headers: {
-
-    }
+    baseURL: 'http://taapi/api',
 })
 export {api}

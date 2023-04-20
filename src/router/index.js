@@ -3,22 +3,27 @@ import IndexView from "@/views/IndexView.vue";
 import LoginView from "@/views/LoginView";
 import ProfileView from "@/views/ProfileView";
 
+function f() {
+  return [
+    {
+      path: '/',
+      name: 'index',
+      component: IndexView
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginView
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: ProfileView
+    },
+  ];
+}
 const routes = [
-  {
-    path: '/',
-    name: 'index',
-    component: IndexView
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: LoginView
-  },
-  {
-    path: '/profile',
-    name: 'profile',
-    component: ProfileView
-  },
+    ...f()
 ]
 
 const router = createRouter({
